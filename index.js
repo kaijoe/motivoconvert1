@@ -84,7 +84,15 @@ function listForm(auth) {
 
 ;
 //for (var i = 0; i < 6; i++){
- rows = res.data.values;
+Array = [];
+rows = res.data.values;
+ console.log(rows)
+
+ /*
+for (var i = 0; i < rows.length; i++)
+{for (var j = 0; i < rows[0])}
+*/
+
 
   //this.sheetsService.spreadsheets.values.get({
     //1K-WfuM9pqn889ptdF-GMABcBK_6beDLmSfQc-qFqBxw,
@@ -97,8 +105,8 @@ function listForm(auth) {
       console.log(result.values.length)
     //  const numRows = result.values ? result.values.length : 0;
       //console.log(`${numRows} rows retrieved.`);
-    }
-  });
+    //}
+  //});
 
 
 
@@ -125,7 +133,7 @@ you need to go over all the rows and store them one by one, then go over the val
 in the row and save them as data to export in the pdf
 */
 
-
+/*
 
     if (rows.length) {
       rows.map((row) => {
@@ -156,7 +164,7 @@ fs.readFile('credentials.json', (err, content) => {
 /**
  * Lists the names and IDs of up to 10 files.
  * @param {google.auth.OAuth2} auth An authorized OAuth2 client.
- */
+
 function uploadFile(auth) {
   const drive = google.drive({version: 'v3', auth});
 
